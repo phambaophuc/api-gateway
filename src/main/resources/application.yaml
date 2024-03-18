@@ -6,7 +6,7 @@ server:
 eureka:
   client:
     service-url:
-      default-zone: https://eureka-server-l9in.onrender.com
+      default-zone: https://eureka-server-l9in.onrender.com/eureka
   instance:
     prefer-ip-address: true
 
