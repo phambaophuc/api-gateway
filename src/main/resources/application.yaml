@@ -1,0 +1,64 @@
+server:
+  port: 8765
+  servlet:
+    context-path: /
+
+eureka:
+  client:
+    service-url:
+      default-zone: https://eureka-server-l9in.onrender.com
+  instance:
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      httpclient:
+        ssl:
+          use-insecure-trust-manager: true
+      discovery:
+        locator:
+          enabled: true
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
+      global-cors:
+        corsConfigurations:
+          '[/product-service/**]': &corsConfig
+            allowCredentials: true
+            allowedOrigins: "http://localhost:4200"
+            allowedHeaders: "*"
+            allowedMethods: "*"
+          '[/order-service/**]': *corsConfig
+          '[/table-service/**]': *corsConfig
+          '[/review-service/**]': *corsConfig
+  config:
+    import: 'optional:configserver:'
+
+logging:
+  pattern:
+    level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+springdoc:
+  version: '2.3.0'
+  api-docs:
+    version: openapi_3_1
+  swagger-ui:
+    use-root-path: true
+    urls:
+      - name: product-service
+        url: /product-service/v3/api-docs
+      - name: order-service
+        url: /order-service/v3/api-docs
+      - name: table-service
+        url: /table-service/v3/api-docs
+      - name: review-service
+        url: /review-service/v3/api-docs
+  cache:
+    disabled: true
