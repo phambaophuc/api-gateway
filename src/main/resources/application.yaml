@@ -9,7 +9,6 @@ eureka:
       default-zone: ${EUREKA_URL:http://localhost:8761/eureka}
   instance:
     prefer-ip-address: true
-    hostname: ${HOSTNAME:localhost}
 
 spring:
   application:
