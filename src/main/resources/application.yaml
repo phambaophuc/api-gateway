@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:8765}
+  port: 8765
   address: 0.0.0.0
   servlet:
     context-path: /
@@ -7,7 +7,7 @@ server:
 eureka:
   client:
     service-url:
-      default-zone: https://eureka-server-production-74ca.up.railway.app/eureka
+      default-zone: http://eureka-server.railway.internal:8761/eureka
   instance:
     prefer-ip-address: true
 
