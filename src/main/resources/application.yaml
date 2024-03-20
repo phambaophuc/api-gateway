@@ -1,15 +1,15 @@
 server:
   port: 8765
-  address: 0.0.0.0
   servlet:
     context-path: /
   
 eureka:
   client:
     service-url:
-      default-zone: http://eureka-server.railway.internal:8761/eureka
+      default-zone: ${EUREKA_URL:http://localhost:8761/eureka}
   instance:
     prefer-ip-address: true
+    hostname: ${HOSTNAME:localhost}
 
 spring:
   application:
