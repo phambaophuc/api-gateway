@@ -7,7 +7,7 @@ server:
 eureka:
   client:
     service-url:
-      default-zone: https://eureka-server-l9in.onrender.com/eureka
+      default-zone: https://eureka-server-production-74ca.up.railway.app/eureka
   instance:
     prefer-ip-address: true
 
