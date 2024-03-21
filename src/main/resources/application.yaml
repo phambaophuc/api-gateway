@@ -27,7 +27,7 @@ spring:
         corsConfigurations:
           '[/product-service/**]': &corsConfig
             allowCredentials: true
-            allowedOrigins: "http://localhost:4200"
+            allowedOrigins: "http://localhost:4200", "https://api-gateway-production-1f5c.up.railway.app"
             allowedHeaders: "*"
             allowedMethods: "*"
           '[/order-service/**]': *corsConfig
