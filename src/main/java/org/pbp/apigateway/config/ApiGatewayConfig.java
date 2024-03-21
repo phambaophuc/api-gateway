@@ -18,7 +18,7 @@ public class ApiGatewayConfig {
                 )
                 .route("order-service", r -> r
                         .path("/order-service/**")
-                        .uri("lb://order-service")
+                        .uri("https://order-service-production-5c3e.up.railway.app")
                 )
                 .route("table-service", r -> r
                         .path("/table-service/**")
