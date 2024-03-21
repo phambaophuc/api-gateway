@@ -53,7 +53,7 @@ springdoc:
     use-root-path: true
     urls:
       - name: product-service
-        url: ${PRODUCT_URL_API_DOCS}
+        url: /product-service/v3/api-docs
       - name: order-service
         url: /order-service/v3/api-docs
       - name: table-service
