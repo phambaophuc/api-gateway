@@ -30,7 +30,7 @@ public class ApiGatewayConfig {
                 )
                 .route("websocket", r -> r
                         .path("/websocket/**")
-                        .uri("https://notification-service-y6a7.onrender.com/websocket")
+                        .uri("https://notification-service-8vz7.onrender.com/websocket")
                 )
                 .build();
     }
