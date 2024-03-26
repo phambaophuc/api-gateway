@@ -14,7 +14,7 @@ public class ApiGatewayConfig {
         return builder.routes()
                 .route("product-service", r -> r
                         .path("/product-service/**")
-                        .uri("https://product-service-0093.onrender.com")
+                        .uri("https://product-service-production-25bc.up.railway.app")
                 )
                 .route("order-service", r -> r
                         .path("/order-service/**")
