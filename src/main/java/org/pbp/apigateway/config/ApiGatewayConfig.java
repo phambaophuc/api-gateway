@@ -14,11 +14,11 @@ public class ApiGatewayConfig {
         return builder.routes()
                 .route("product-service", r -> r
                         .path("/product-service/**")
-                        .uri("https://product-service-production-fee7.up.railway.app")
+                        .uri("https://product-service-0093.onrender.com")
                 )
                 .route("order-service", r -> r
                         .path("/order-service/**")
-                        .uri("https://order-service-production-5c3e.up.railway.app")
+                        .uri("https://order-service-y3mg.onrender.com")
                 )
                 .route("table-service", r -> r
                         .path("/table-service/**")
