@@ -26,7 +26,7 @@ public class ApiGatewayConfig {
                 )
                 .route("review-service", r -> r
                         .path("/review-service/**")
-                        .uri("lb://review-service")
+                        .uri("https://review-service.onrender.com")
                 )
                 .route("websocket", r -> r
                         .path("/websocket/**")
