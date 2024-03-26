@@ -22,7 +22,7 @@ public class ApiGatewayConfig {
                 )
                 .route("table-service", r -> r
                         .path("/table-service/**")
-                        .uri("https://table-service.onrender.com")
+                        .uri("https://table-service-production.up.railway.app")
                 )
                 .route("review-service", r -> r
                         .path("/review-service/**")
