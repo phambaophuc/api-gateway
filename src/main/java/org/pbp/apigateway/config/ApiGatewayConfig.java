@@ -18,7 +18,7 @@ public class ApiGatewayConfig {
                 )
                 .route("order-service", r -> r
                         .path("/order-service/**")
-                        .uri("https://order-service-y3mg.onrender.com")
+                        .uri("https://order-service-production-5b8c.up.railway.app")
                 )
                 .route("table-service", r -> r
                         .path("/table-service/**")
